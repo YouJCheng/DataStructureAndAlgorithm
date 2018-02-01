@@ -3,7 +3,17 @@
 import UIKit
 import PlaygroundSupport
 
-// 節點
+/* 節點(node)
+
+ Data
+    value:持有的数据
+
+Operation 操作
+    init: 初始化
+    previous: 指向上一節點的指針
+    next: 指向下一節點的指針
+*/
+
 public class LinkedListNode<T> {
 
     //value of a node
@@ -20,8 +30,25 @@ public class LinkedListNode<T> {
         self.value = value
     }
 }
+/* 链表（linked list）
 
-// 鏈表
+Data
+    linked list: 持有的線性表
+
+Operation
+    init: 初始化
+    count: 持有節點總個數
+    isEmpty: 是否為空
+    first: 頭節點
+    last: 尾節點
+    node: 傳入index導出節點
+    insert: 插入node到指定節點
+    insertToHead: 插入節點到表頭
+    appendToTail: 插入節點到表尾
+    removeAll: 移除所有節點
+    remove: 移除傳入的節點
+    removeAt: 移除傳入index的節點
+*/
 public class LinkedList<T> {
 
     // typealias 重新命名LinkedListNode<T> 讓Code 容易閱讀
@@ -45,6 +72,13 @@ public class LinkedList<T> {
         }
 
         // until node.next is nil
+        /*
+         while 控制語句來判斷node.next節點是否存在：
+         如果存在，則繼續+1或者繼續往下尋找，直到node.next為nil時才停止。
+         鍊錶的尋址方式：通過頭結點開始，以節點的.next指針來尋找下一個節點。
+         鍊錶的尾節點，它的.next指針不指向任何對象，因為它本來就是鍊錶的最後一項。
+         */
+
         while let next = node.next {
             node = next
         }
@@ -59,6 +93,12 @@ public class LinkedList<T> {
         }
 
         var count = 1
+        /*
+         while 控制語句來判斷node.next節點是否存在：
+        如果存在，則繼續+1或者繼續往下尋找，直到node.next為nil時才停止。
+        鍊錶的尋址方式：通過頭結點開始，以節點的.next指針來尋找下一個節點。
+        鍊錶的尾節點，它的.next指針不指向任何對象，因為它本來就是鍊錶的最後一項。
+         */
 
         while let next = node.next {
             node = next

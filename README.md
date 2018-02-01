@@ -1,6 +1,6 @@
 # DataStructureAndAlgorithm
 
-> h1資料結構h1
+> 資料結構
 * LinkedListNodePlayGround / 雙向鏈表的實現
 
     每個資料結點中都有兩個指標，分別指向直接後繼和直接前驅。

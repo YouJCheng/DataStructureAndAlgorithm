@@ -1,4 +1,4 @@
-# LinkedListNode
+# DataStructureAndAlgorithm
 雙向鏈表的實現
 
 每個資料結點中都有兩個指標，分別指向直接後繼和直接前驅。
